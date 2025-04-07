@@ -38,7 +38,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img
-            src="/assets/images/logo.png"
+            src="https://svitatp.ac.in/public/assets/admin/images/sitesetting/664263736b243_SVIT%20LOGO.png"
             width="40"
             height="40"
             className="d-inline-block align-top me-2"

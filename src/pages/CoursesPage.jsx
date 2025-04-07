@@ -4,13 +4,15 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CourseList from '../components/courses/CourseList';
 import Loader from '../components/common/Loader';
+import Sidebar from '../components/common/Sidebar';
 import { useAuth } from '../contexts/AuthContext';
 
 const CoursesPage = () => {
   const { currentUser } = useAuth();
   const [loading, setLoading] = useState(true);
   const [courses, setCourses] = useState([]);
-  
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false); // Add this state
+
   useEffect(() => {
     const fetchCourses = async () => {
       try {
@@ -111,10 +113,17 @@ const CoursesPage = () => {
     fetchCourses();
   }, []);
   
+    // Add this function
+    const toggleSidebar = () => {
+      setSidebarCollapsed(!sidebarCollapsed);
+    };
+
+
   return (
     <div className="courses-page min-vh-100 d-flex flex-column">
       <Header />
-      
+      <Sidebar/>
+      <div className="content-wrapper flex-grow-1 min-vh-100 d-flex flex-column" style={{ marginLeft: sidebarCollapsed ? '70px' : '260px' }}> {/* Add this wrapper */}
       <Container fluid className="flex-grow-1 py-4">
         <Container>
           <Row className="mb-4">
@@ -133,6 +142,7 @@ const CoursesPage = () => {
       </Container>
       
       <Footer />
+      </div>
     </div>
   );
 };

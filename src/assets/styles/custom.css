@@ -205,7 +205,6 @@ a:hover {
 
 /* Login and Registration Page */
 .login-page {
-  background: linear-gradient(to right, rgba(63, 81, 181, 0.8), rgba(63, 81, 181, 0.9)), url('/assets/images/campus.jpg');
   background-size: cover;
   background-position: center;
 }

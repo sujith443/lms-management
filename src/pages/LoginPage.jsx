@@ -115,7 +115,7 @@ const LoginPage = ({ register = false }) => {
           <Col md={8} lg={6}>
             <div className="text-center mb-4">
               <img 
-                src="/assets/images/logo.png" 
+                src="https://svitatp.ac.in/public/assets/admin/images/sitesetting/664263736b243_SVIT%20LOGO.png" 
                 alt="SVIT College Logo" 
                 width="80" 
                 height="80" 
